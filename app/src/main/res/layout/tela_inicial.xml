@@ -28,12 +28,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:hint="@string/usuario" />
+        android:hint="@string/usuario"
+        android:inputType="textEmailAddress"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/senha"
+        android:inputType="textPassword"
         android:layout_weight="0.09"/>
 
     <Button
