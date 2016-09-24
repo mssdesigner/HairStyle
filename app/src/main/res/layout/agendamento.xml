@@ -15,8 +15,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Agendamento"
+        android:id="@+id/agendamento"
+        android:textSize="15pt"
         android:textAlignment="center"
-        android:id="@+id/txtAgendamento" android:textSize="15pt"/>
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
