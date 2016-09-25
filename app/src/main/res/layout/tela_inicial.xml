@@ -15,10 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
-        android:textSize="12pt"
+        android:textSize="15pt"
         android:textAlignment="center"
         android:text="Bem-Vindo"
         android:layout_weight="0.14"
+        android:textStyle="bold"
         android:onClick=""/>
 
     <View
@@ -52,10 +53,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
-        android:textSize="12pt"
+        android:textSize="15pt"
         android:textAlignment="center"
         android:text="Cadastre-se"
         android:layout_weight="0.14"
+        android:textStyle="bold"
         android:onClick="" />
 
 
