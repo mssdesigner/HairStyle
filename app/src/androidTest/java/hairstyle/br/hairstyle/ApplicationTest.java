@@ -1,4 +1,4 @@
-package metodista.br.hairstyle;
+package hairstyle.br.hairstyle;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

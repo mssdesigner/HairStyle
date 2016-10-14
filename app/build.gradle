@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "metodista.br.hairstyle"
-        minSdkVersion 23
+        applicationId "hairstyle.br.hairstyle"
+        minSdkVersion 22
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"

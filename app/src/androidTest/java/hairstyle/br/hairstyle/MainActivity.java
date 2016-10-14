@@ -1,4 +1,4 @@
-package metodista.br.hairstyle;
+package hairstyle.br.hairstyle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
