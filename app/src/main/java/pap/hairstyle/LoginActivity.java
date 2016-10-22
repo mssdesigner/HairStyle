@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         System.out.println("Executa depois da thread");
 
         if(c != null){
-            Intent intencao = new Intent(LoginActivity.this,CorteActivity.class);
+            Intent intencao = new Intent(LoginActivity.this,CabelereiroActivity.class);
 
         }else{
             Toast toast = Toast.makeText(LoginActivity.this,"Falha na Autenticação", Toast.LENGTH_SHORT);
@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void Logar(Cliente c){
         if(c != null) {
-            Intent intencao = new Intent(this, CorteActivity.class);
+            Intent intencao = new Intent(this, CabelereiroActivity.class);
             System.out.println("Entrou aqui");
         }else{
             Toast toast = Toast.makeText(this,"Erro Ao efetuar Login",Toast.LENGTH_SHORT);
@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
             dialog.dismiss();
             try {
                 if (c != null) {
-                    Intent intencao = new Intent(LoginActivity.this, CorteActivity.class);
+                    Intent intencao = new Intent(LoginActivity.this,CabelereiroActivity.class);
                     startActivity(intencao);
                 } else {
                     Toast toast = Toast.makeText(LoginActivity.this, "Erro Ao efetuar Login", Toast.LENGTH_SHORT);

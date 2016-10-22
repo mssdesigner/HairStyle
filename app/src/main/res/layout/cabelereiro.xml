@@ -15,8 +15,15 @@
         android:layout_marginBottom="40sp"
         android:textStyle="bold" />
 
+    <ListView
+        android:id="@+id/listviewCabelereiro"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
 
-    <TextView
+    </ListView>
+
+
+    <!--<TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
@@ -82,6 +89,6 @@
         android:clickable="true"
         android:layout_marginLeft="130dp"
         android:layout_marginTop="-35dp"
-        android:focusable="false" />
+        android:focusable="false" />     -->>
 
 </LinearLayout>
