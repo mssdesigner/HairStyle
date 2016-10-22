@@ -4,7 +4,7 @@ package pap.hairstyle.entity;
  * Created by Renan on 22/10/2016.
  */
 
-public class Cabelereiro {
+public class Cabeleireiro {
     private String nomeCabelereiro;
 
 
