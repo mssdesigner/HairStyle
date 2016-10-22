@@ -2,8 +2,5 @@
 <resources>
     <color name="colorPrimary">#413e22</color>
     <color name="colorPrimaryDark">#504a1d</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="silver">#FF3B3A3A</color>
-    <color name="marron">#413e22</color>
-    <color name="botao">#5c979b</color>
+    <color name="colorAccent">#000000</color>
 </resources>

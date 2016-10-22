@@ -1,16 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity"
-    android:weightSum="1">
-
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
         android:layout_width="fill_parent"
@@ -208,44 +204,40 @@
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="18:00"
-            android:id="@+id/check5"
+            android:id="@+id/check21"
             android:checked="false" />
 
         <CheckBox
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="18:30"
-            android:id="@+id/check6"
+            android:id="@+id/check22"
             android:checked="false" />
 
         <CheckBox
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="19:00"
-            android:id="@+id/check7"
+            android:id="@+id/check23"
             android:checked="false" />
 
         <CheckBox
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="19:30"
-            android:id="@+id/check8"
+            android:id="@+id/check24"
             android:checked="false" />
 
     </LinearLayout>
-
-
-
-
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:text="Próximo"
-        android:background="@color/marron"
         android:textColor="#faf6f6"
-        android:textSize="10pt" />
+        android:textSize="10pt"
+        android:background="#413e22" />
 
 
 </LinearLayout>

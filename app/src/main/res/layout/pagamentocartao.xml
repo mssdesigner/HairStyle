@@ -65,34 +65,34 @@
         android:text="Bandeira"
         android:id="@+id/txtBandeiraCartao" android:textSize="20sp"/>
 
-        <RadioButton
-            android:layout_width="170sp"
-            android:layout_height="wrap_content"
-            android:text="Visa"
-            android:id="@+id/cartaoVisa"
-            android:checked="false"
-            android:layout_marginTop="15px"
-            android:textSize="10pt" />
+    <RadioButton
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:text="Visa"
+        android:id="@+id/cartaoVisa"
+        android:checked="false"
+        android:layout_marginTop="15px"
+        android:textSize="10pt" />
 
-        <RadioButton
-            android:layout_width="200sp"
-            android:layout_height="wrap_content"
-            android:text="MasterCard"
-            android:id="@+id/cartaoMaster"
-            android:checked="false"
-            android:layout_marginLeft="250px"
-            android:layout_marginTop="-60px"
-            android:textSize="10pt" />
+    <RadioButton
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:text="MasterCard"
+        android:id="@+id/cartaoMaster"
+        android:checked="false"
+        android:layout_marginLeft="250px"
+        android:layout_marginTop="-60px"
+        android:textSize="10pt" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Confirmar"
-            android:id="@+id/btnConfirmar"
-            android:layout_gravity="center_horizontal"
-            android:textSize="20dp"
-            android:layout_marginTop="40px"
-            android:background="@color/marron"
-            android:textColor="#faf6f6" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        android:id="@+id/btnConfirmar"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:layout_marginTop="40px"
+        android:textColor="#faf6f6"
+        android:background="#413e22" />
 
 </LinearLayout>

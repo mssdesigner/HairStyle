@@ -1,57 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Cadastro"
-        android:id="@+id/cadastro"
-        android:textSize="15pt"
         android:textAlignment="center"
+        android:id="@+id/txtCadastro"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="5sp"
         android:text="Nome:"
-        android:id="@+id/txtNome" android:textSize="20sp"/>
+        android:id="@+id/txtNome"
+        android:textSize="20sp"/>
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-5sp"
-        android:id="@+id/editTextNome" />
+        android:id="@+id/editTextNome"
+        android:inputType="textImeMultiLine"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="5sp"
         android:text="Email:"
-        android:id="@+id/txtEmail" android:textSize="20sp"/>
+        android:id="@+id/txtEmail"
+        android:textSize="20sp"/>
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-5sp"
-        android:id="@+id/editTextEmail" />
+        android:id="@+id/editTextEmail"
+        android:inputType="textImeMultiLine"/>
 
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="5sp"
         android:text="Senha:"
-        android:id="@+id/txtSenhaCadastro" android:textSize="20sp"/>
+        android:id="@+id/txtSenhaCadastro"
+        android:textSize="20sp"/>
 
     <EditText
         android:layout_width="fill_parent"
@@ -63,28 +66,47 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:text="Telefone:"
-        android:id="@+id/txtTelefone" android:textSize="20sp"/>
+        android:layout_marginTop="5sp"
+        android:text="Confirmar Senha:"
+        android:id="@+id/txtConfSenhaCadastro"
+        android:textSize="20sp"/>
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-5sp"
-        android:id="@+id/editTextTelefone" />
+        android:inputType="textPassword"
+        android:id="@+id/editTextConfSenha" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:text="CPF:"
-        android:id="@+id/txtCPF" android:textSize="20sp"/>
+        android:layout_marginTop="5sp"
+        android:text="Telefone:"
+        android:id="@+id/txtTelefone"
+        android:textSize="20sp"/>
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-5sp"
-        android:id="@+id/editTextCPF" />
+        android:id="@+id/editTextTelefone"
+        android:inputType="textImeMultiLine"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:text="CPF:"
+        android:id="@+id/txtCPF"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5sp"
+        android:id="@+id/editTextCPF"
+        android:inputType="textImeMultiLine"/>
 
     <Button
         android:layout_width="match_parent"
@@ -92,11 +114,10 @@
         android:text="Cadastrar"
         android:id="@+id/btnCadastrar"
         android:layout_gravity="center_horizontal"
-        android:textSize="20dp"
-        android:layout_marginTop="10px"
-        android:background="@color/marron"
-        android:textColor="#faf6f6" />
-
-
+        android:layout_marginTop="1sp"
+        android:background="#413e22"
+        android:textColor="#ffffff"
+        android:textSize="10pt"
+        android:onClick="fazerCadastro"/>
 
 </LinearLayout>

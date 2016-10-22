@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity">
-
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
         android:layout_width="fill_parent"
@@ -38,25 +35,26 @@
             android:layout_height="wrap_content"
             android:text="Lucio Bezzera"
             android:textAlignment="center"
-            android:id="@+id/txtCadastro" android:textSize="25sp"
+            android:id="@+id/txtCadastro"
+            android:textSize="25sp"
             android:layout_marginTop="10sp" />
 
     </LinearLayout>
 
 
 
-    <CalendarView
-        android:layout_width="match_parent"
-        android:layout_height="320dp"
-        android:id="@+id/calendarView" />
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:id="@+id/calendarView" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="Próximo"
-        android:background="@color/marron"
-        android:textColor="#faf6f6"
-        android:textSize="10pt" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Próximo"
+            android:textColor="#faf6f6"
+            android:textSize="10pt"
+            android:background="#413e22" />
 
 
 </LinearLayout>
