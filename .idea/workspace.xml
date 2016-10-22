@@ -6,7 +6,9 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e6b7caa-8aa0-46d2-9d28-673c758fd7a9" name="Default" comment="" />
+    <list default="true" id="5e6b7caa-8aa0-46d2-9d28-673c758fd7a9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/cortes.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cortes.xml" />
+    </list>
     <ignored path="HairStyle.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -56,8 +58,8 @@
       <file leaf-file-name="cortes.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/cortes.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="348">
+              <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
               <folding>
                 <element signature="e#1625#1642#0" expanded="true" />
               </folding>
@@ -2257,8 +2259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/cortes.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="348">
+          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
           <folding>
             <element signature="e#1625#1642#0" expanded="true" />
           </folding>
