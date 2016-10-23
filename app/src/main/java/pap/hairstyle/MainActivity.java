@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intencao);
     }
 
+    public void abreLista(View view){
+        Intent intencao = new Intent(this,CabeleireiroActivity.class);
+        startActivity(intencao);
+    }
+
 }

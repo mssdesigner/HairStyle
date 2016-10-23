@@ -14,11 +14,15 @@
         android:id="@+id/logo"
         android:src="@drawable/stylehair"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
 
         android:contentDescription="@string/stylehair"
         android:clickable="true"
         android:onClick="irParaTelaInicial"
+
+
         />
+
+
 
 </LinearLayout>

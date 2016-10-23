@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Cabeleireiros"
+        android:textAlignment="center"
+        android:id="@+id/txtCabeleireiros"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/julio"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Julio"
+            android:layout_width="290dp"
+            android:layout_height="121dp"
+            android:id="@+id/textView"
+            android:textSize="36sp"
+            android:textAlignment="center" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/maria"
+            android:id="@+id/imageView1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Maria"
+            android:layout_width="290dp"
+            android:layout_height="121dp"
+            android:id="@+id/textView1"
+            android:textSize="36sp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/marcos"
+            android:id="@+id/imageView3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Marcos"
+            android:layout_width="290dp"
+            android:layout_height="121dp"
+            android:id="@+id/textView4"
+            android:textSize="36sp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/ronaldo"
+            android:id="@+id/imageView5"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Ronaldo"
+            android:layout_width="290dp"
+            android:layout_height="121dp"
+            android:id="@+id/textView6"
+            android:textSize="36sp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
