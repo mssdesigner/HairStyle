@@ -1,14 +1,18 @@
 package pap.hairstyle.service;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-import pap.hairstyle.entity.Cabelereiro;
+import pap.hairstyle.entity.Cabeleireiro;
+import pap.hairstyle.entity.Funcionario;
 
 /**
  * Created by Renan on 22/10/2016.
@@ -16,8 +20,8 @@ import pap.hairstyle.entity.Cabelereiro;
 
 public class CabelereiroService {
 
-    public Cabelereiro getCabelereiro(){
-        Cabelereiro ca = null;
+    public List<Funcionario> getCabelereiro(){
+        List<Funcionario> cabs = new ArrayList();
 
         HttpURLConnection urlConnection = null;
 
@@ -29,10 +33,10 @@ public class CabelereiroService {
 
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
             Scanner s = new Scanner(in);
-            String conteudo = s.useDelimiter("\\A").nextLine();
+            String conteudo = s.useDelimiter("\\A").next();
 
             Gson gson = new Gson();
-            ca = gson.fromJson(conteudo,Cabelereiro.class);
+            cabs = gson.fromJson(conteudo,new TypeToken<List<Funcionario>>(){}.getType());
 
 
         }catch (Exception e){
@@ -42,7 +46,7 @@ public class CabelereiroService {
             urlConnection.disconnect();
         }
 
-        return ca;
+        return cabs;
     }
 
 
