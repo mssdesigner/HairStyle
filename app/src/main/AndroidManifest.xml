@@ -21,6 +21,7 @@
         <activity android:name=".CadastroActivity"/>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".CorteActivity"/>
+        <activity android:name=".CabeleireiroActivity"/>
     </application>
 
 </manifest>
