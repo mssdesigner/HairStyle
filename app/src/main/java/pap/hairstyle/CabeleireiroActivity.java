@@ -1,9 +1,12 @@
 package pap.hairstyle;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -21,12 +24,35 @@ import pap.hairstyle.service.CabelereiroService;
 public class CabeleireiroActivity extends AppCompatActivity {
 
     private ArrayAdapter<String> adapter;
+    ListView lista;
+    String nomeFunc = "";
+    List<String> nomes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_cabeleireiro);
+
+        lista = (ListView) findViewById(R.id.listviewcabeleireiros);
         carregarDados();
+
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?>parent, View view, int position,long id){
+                String nomeFunc = nomes.get(position);
+                Bundle bundle = new Bundle();
+                bundle.putString("funcionario",nomeFunc);
+
+                Intent intencao = new Intent(CabeleireiroActivity.this,CorteActivity.class);
+                intencao.putExtras(bundle);
+                startActivity(intencao);
+
+            }
+
+        });
+
+
+
     }
 
 
@@ -44,12 +70,12 @@ public class CabeleireiroActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(List<Funcionario> funcionarios) {
             if(funcionarios != null){
-                List<String> nomes = new ArrayList();
+                nomes = new ArrayList();
                 for(int i =0; i< funcionarios.size();i++){
                     nomes.add(funcionarios.get(i).getNome());
                 }
                 adapter = new ArrayAdapter<String>(CabeleireiroActivity.this,android.R.layout.simple_list_item_1,nomes);
-                ((ListView) findViewById(R.id.listviewcabeleireiros)).setAdapter(adapter);
+                lista.setAdapter(adapter);
             }
 
 
