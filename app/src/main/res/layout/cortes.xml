@@ -24,12 +24,19 @@
         <ImageView
             android:layout_width="190sp"
             android:layout_height="200sp"
-            android:src="@drawable/corte_a"/>
+            android:src="@drawable/corte_a"
+            android:clickable="true"
+            android:onClick="escolherCorte"
+            />
+
 
         <ImageView
             android:layout_width="190sp"
             android:layout_height="200sp"
-            android:src="@drawable/corte_b"/>
+            android:src="@drawable/corte_b"
+            android:clickable="true"
+            android:onClick="escolherCorte"
+            />
 
     </LinearLayout>
 
@@ -41,12 +48,18 @@
         <ImageView
             android:layout_width="190sp"
             android:layout_height="150sp"
-            android:src="@drawable/corte_c"/>
+            android:src="@drawable/corte_c"
+            android:clickable="true"
+            android:onClick="escolherCorte"
+            />
 
         <ImageView
             android:layout_width="190sp"
             android:layout_height="150sp"
-            android:src="@drawable/corte_d"/>
+            android:src="@drawable/corte_d"
+            android:clickable="true"
+            android:onClick="escolherCorte"
+            />
 
     </LinearLayout>
 
