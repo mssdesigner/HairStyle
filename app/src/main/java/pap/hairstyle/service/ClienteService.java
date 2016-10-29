@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
@@ -22,8 +23,8 @@ import pap.hairstyle.entity.Cliente;
 public class ClienteService {
 
     public Cliente post(Cliente cliente){
-        String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/cliente";
-        //String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/cliente";
+        //String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/cliente";
+        String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/cliente";
 
         HttpURLConnection urlConnection = null;
         try {
@@ -61,14 +62,14 @@ public class ClienteService {
     }
 
 
-    public Cliente getClienteEmailESenha(String email, String senha){
+    public Cliente getClienteEmailESenha(String email, String senha) {
         Cliente c = null;
 
         HttpURLConnection urlConnection = null;
 
-        String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/cliente/" + email + "/" + senha;
-        //String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/cliente/" + email + "/" + senha;
-        try{
+        //String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/cliente/" + email + "/" + senha;
+        String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/cliente/" + email + "/" + senha;
+        try {
             URL url = new URL(caminho);
             urlConnection = (HttpURLConnection) url.openConnection();
 
@@ -77,8 +78,11 @@ public class ClienteService {
             String conteudo = s.useDelimiter("\\A").nextLine();
 
             Gson gson = new Gson();
-            c = gson.fromJson(conteudo,Cliente.class);
+            c = gson.fromJson(conteudo, Cliente.class);
 
+
+        }catch(ConnectException ce){
+            return null;
 
         }catch (Exception e){
             throw new RuntimeException(e);

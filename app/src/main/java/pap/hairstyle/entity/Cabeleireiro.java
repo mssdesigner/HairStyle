@@ -7,10 +7,10 @@ package pap.hairstyle.entity;
 public class Cabeleireiro {
 
     private String nome;
-    private int imagem;
+    private String imagem;
     private String descricao;
 
-    public Cabeleireiro(String nome, int imagem, String descricao) {
+    public Cabeleireiro(String nome, String imagem, String descricao) {
         this.nome = nome;
         this.imagem = imagem;
         this.descricao = descricao;
@@ -24,11 +24,11 @@ public class Cabeleireiro {
         this.nome = nome;
     }
 
-    public int getImagem() {
+    public String getImagem() {
         return imagem;
     }
 
-    public void setImagem(int imagem) {
+    public void setImagem(String imagem) {
         this.imagem = imagem;
     }
 

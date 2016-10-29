@@ -5,6 +5,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
+import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -20,14 +21,14 @@ import pap.hairstyle.entity.Funcionario;
 
 public class CabelereiroService {
 
-    public List<Funcionario> getCabelereiro(){
+    public List<Funcionario> getCabelereiro() {
         List<Funcionario> cabs = new ArrayList();
 
         HttpURLConnection urlConnection = null;
 
-        String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/funcionario/" ;
-        //String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/funcionario";
-        try{
+        // String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/funcionario/" ;
+        String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/funcionario";
+        try {
             URL url = new URL(caminho);
             urlConnection = (HttpURLConnection) url.openConnection();
 
@@ -36,10 +37,15 @@ public class CabelereiroService {
             String conteudo = s.useDelimiter("\\A").next();
 
             Gson gson = new Gson();
-            cabs = gson.fromJson(conteudo,new TypeToken<List<Funcionario>>(){}.getType());
+            cabs = gson.fromJson(conteudo, new TypeToken<List<Funcionario>>() {
+            }.getType());
 
 
-        }catch (Exception e){
+        }catch (ConnectException ce) {
+            System.out.printf("Passou pel cabelereiro connect Expception !!! ");
+
+
+    }catch (Exception e){
             throw new RuntimeException(e);
 
         }finally {

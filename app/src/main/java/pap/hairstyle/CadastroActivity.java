@@ -60,6 +60,7 @@ public class CadastroActivity extends AppCompatActivity {
             ((EditText) findViewById(R.id.editTextTelefone)).setText("");
             ((EditText) findViewById(R.id.editTextSenha)).setText("");
             ((EditText) findViewById(R.id.editTextEmail)).setText("");
+            ((EditText) findViewById(R.id.editTextConfSenha)).setText("");
 
             dialog.dismiss();
         }

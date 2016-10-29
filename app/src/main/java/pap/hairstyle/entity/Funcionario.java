@@ -8,9 +8,18 @@ public class Funcionario
 {
 
     private Long id;
+    private String imagem;
     private String nome;
     private String email;
     private String senha;
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
 
     public Long getId() {
         return id;
