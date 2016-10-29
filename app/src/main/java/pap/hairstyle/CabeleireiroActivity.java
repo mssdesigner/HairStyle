@@ -23,10 +23,10 @@ import pap.hairstyle.service.CabelereiroService;
 
 public class CabeleireiroActivity extends AppCompatActivity {
 
-    private ArrayAdapter<String> adapter;
+    private ArrayAdapter<Funcionario> adapter;
     ListView lista;
-    String nomeFunc = "";
-    List<String> nomes;
+
+    List<Funcionario> funcs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +39,10 @@ public class CabeleireiroActivity extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?>parent, View view, int position,long id){
-                String nomeFunc = nomes.get(position);
-                Bundle bundle = new Bundle();
-                bundle.putString("funcionario",nomeFunc);
 
+               Bundle bundle = new Bundle();
+               // bundle.putString("funcionario",nomeFunc);
+                bundle.putSerializable("funcionario", funcs.get(position));
                 Intent intencao = new Intent(CabeleireiroActivity.this,CorteActivity.class);
                 intencao.putExtras(bundle);
                 startActivity(intencao);
@@ -67,7 +67,7 @@ public class CabeleireiroActivity extends AppCompatActivity {
             dialog = new ProgressDialog(CabeleireiroActivity.this);
             dialog.show();
         }
-        @Override
+  /*      @Override
         protected void onPostExecute(List<Funcionario> funcionarios) {
             if(funcionarios != null){
                 nomes = new ArrayList();
@@ -75,6 +75,22 @@ public class CabeleireiroActivity extends AppCompatActivity {
                     nomes.add(funcionarios.get(i).getNome());
                 }
                 adapter = new ArrayAdapter<String>(CabeleireiroActivity.this,android.R.layout.simple_list_item_1,nomes);
+                lista.setAdapter(adapter);
+            }
+
+
+
+            dialog.dismiss();
+
+
+        }
+        */
+
+        @Override
+        protected void onPostExecute(List<Funcionario> funcionarios) {
+            if(funcionarios != null){
+                funcs = funcionarios;
+                adapter = new FuncionarioArrayAdapater(getBaseContext(),0,funcionarios,CabeleireiroActivity.this);
                 lista.setAdapter(adapter);
             }
 
