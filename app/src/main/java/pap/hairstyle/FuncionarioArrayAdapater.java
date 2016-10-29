@@ -1,6 +1,9 @@
 package pap.hairstyle;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,9 +34,23 @@ public class FuncionarioArrayAdapater extends ArrayAdapter<Funcionario> {
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
                 View linha = inflater.inflate(R.layout.listview_cabeleireiro, parent , false);
-                TextView nome = (TextView) linha .findViewById(R.id.);
-                ImageView imagem = (ImageView) linha.findViewById(R.id.);
+                TextView nome = (TextView) linha .findViewById(R.id.textView);
+                ImageView imagem = (ImageView) linha.findViewById(R.id.imageView);
 
+                int drawableId = getImageDrawableResId("julio");
+                Drawable dr = ResourcesCompat.getDrawable(getResources(),drawableId,null);
+
+
+                Funcionario func = funcionarios.get(position);
+                nome.setText(func.getNome());
+                imagem.setImageDrawable(dr);
+
+                return linha;
+        }
+
+        public int getImageDrawableResId(String imageView) {
+                Resources resources = getResources();
+                return resources.getIdentifier(imageView, "drawable", getPackageName());
         }
 
 }
