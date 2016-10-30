@@ -1,10 +1,12 @@
 package pap.hairstyle.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by Renan on 25/10/2016.
  */
 
-public class Funcionario
+public class Funcionario implements Serializable
 {
 
     private Long id;
@@ -12,6 +14,7 @@ public class Funcionario
     private String nome;
     private String email;
     private String senha;
+    private String camFoto;
 
     public String getImagem() {
         return imagem;
@@ -51,5 +54,14 @@ public class Funcionario
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+
+    public String getCamFoto() {
+        return camFoto;
+    }
+
+    public void setCamFoto(String camFoto) {
+        this.camFoto = camFoto;
     }
 }

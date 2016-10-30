@@ -22,9 +22,11 @@ import pap.hairstyle.entity.Cliente;
 
 public class ClienteService {
 
+    //private String caminho = "http://192.168.0.18:8081/WsStyleHair/webresources/cliente";
+    private String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/cliente";
+
     public Cliente post(Cliente cliente){
-        //String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/cliente";
-        String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/cliente";
+
 
         HttpURLConnection urlConnection = null;
         try {
@@ -67,10 +69,9 @@ public class ClienteService {
 
         HttpURLConnection urlConnection = null;
 
-        //String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/cliente/" + email + "/" + senha;
-        String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/cliente/" + email + "/" + senha;
+
         try {
-            URL url = new URL(caminho);
+            URL url = new URL(caminho+"/"+email+"/"+senha);
             urlConnection = (HttpURLConnection) url.openConnection();
 
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());

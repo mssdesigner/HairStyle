@@ -54,7 +54,9 @@
             android:text="Próximo"
             android:textColor="#faf6f6"
             android:textSize="10pt"
-            android:background="#413e22" />
+            android:background="#413e22"
+            android:onClick="pegarDataEscolhida"
+            />
 
 
 </LinearLayout>

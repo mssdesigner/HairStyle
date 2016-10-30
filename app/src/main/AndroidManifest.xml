@@ -21,6 +21,8 @@
         <activity android:name=".CadastroActivity"/>
         <activity android:name=".CorteActivity"/>
         <activity android:name=".CabeleireiroActivity"/>
+        <activity android:name=".AgendamentoActivity"/>
+        <activity android:name=".HorarioActivity"/>
     </application>
 
 </manifest>

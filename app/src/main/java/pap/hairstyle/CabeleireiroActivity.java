@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,15 +25,16 @@ import pap.hairstyle.service.CabelereiroService;
 
 public class CabeleireiroActivity extends AppCompatActivity {
 
-    private ArrayAdapter<String> adapter;
+    private ArrayAdapter<Funcionario> adapter;
     ListView lista;
-    String nomeFunc = "";
-    List<String> nomes;
+
+    List<Funcionario> funcs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_cabeleireiro);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         lista = (ListView) findViewById(R.id.listviewcabeleireiros);
         carregarDados();
@@ -39,10 +42,10 @@ public class CabeleireiroActivity extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?>parent, View view, int position,long id){
-                String nomeFunc = nomes.get(position);
-                Bundle bundle = new Bundle();
-                bundle.putString("funcionario",nomeFunc);
 
+               Bundle bundle = new Bundle();
+               // bundle.putString("funcionario",nomeFunc);
+                bundle.putSerializable("funcionario", funcs.get(position));
                 Intent intencao = new Intent(CabeleireiroActivity.this,CorteActivity.class);
                 intencao.putExtras(bundle);
                 startActivity(intencao);
@@ -53,6 +56,19 @@ public class CabeleireiroActivity extends AppCompatActivity {
 
 
 
+    }
+
+    //metodo para voltar para tela anterior
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
     }
 
 
@@ -67,7 +83,7 @@ public class CabeleireiroActivity extends AppCompatActivity {
             dialog = new ProgressDialog(CabeleireiroActivity.this);
             dialog.show();
         }
-        @Override
+  /*      @Override
         protected void onPostExecute(List<Funcionario> funcionarios) {
             if(funcionarios != null){
                 nomes = new ArrayList();
@@ -75,6 +91,22 @@ public class CabeleireiroActivity extends AppCompatActivity {
                     nomes.add(funcionarios.get(i).getNome());
                 }
                 adapter = new ArrayAdapter<String>(CabeleireiroActivity.this,android.R.layout.simple_list_item_1,nomes);
+                lista.setAdapter(adapter);
+            }
+
+
+
+            dialog.dismiss();
+
+
+        }
+        */
+
+        @Override
+        protected void onPostExecute(List<Funcionario> funcionarios) {
+            if(funcionarios != null){
+                funcs = funcionarios;
+                adapter = new FuncionarioArrayAdapater(getBaseContext(),0,funcionarios,CabeleireiroActivity.this);
                 lista.setAdapter(adapter);
             }
 

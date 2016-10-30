@@ -1,10 +1,12 @@
 package pap.hairstyle.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by Renan on 22/10/2016.
  */
 
-public class Cabeleireiro {
+public class Cabeleireiro implements Serializable{
 
     private String nome;
     private String imagem;
