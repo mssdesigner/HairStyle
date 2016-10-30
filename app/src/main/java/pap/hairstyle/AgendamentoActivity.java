@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CalendarView;
 import android.widget.TextView;
+import android.view.View;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -17,6 +20,8 @@ import pap.hairstyle.entity.Funcionario;
  */
 
 public class AgendamentoActivity extends AppCompatActivity {
+    private Intent intencao;
+
 
     private CalendarView calendar;
     @Override
@@ -24,7 +29,7 @@ public class AgendamentoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agendamento);
 
-        Intent intencao = getIntent();
+        intencao = getIntent();
         Bundle info = intencao.getExtras();
         Funcionario func = (Funcionario)info.getSerializable("funcionario");
         System.out.println("funcionario ----" + func.getNome());
@@ -38,4 +43,22 @@ public class AgendamentoActivity extends AppCompatActivity {
         calendar.setMinDate(today.getTime());
 
     }
+
+
+    public void pegarDataEscolhida(View view){
+        Long data = calendar.getDate();
+       // System.out.println("passou aqui");
+      //  DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+      //  Date date = new Date(data);
+      //  System.out.println("essa data escolhida : " + df.format(date));
+
+
+        Bundle info = intencao.getExtras();
+        info.putLong("dataEsc",data);
+
+        Intent intent = new Intent(this,HorarioActivity.class);
+        intent.putExtras(info);
+        startActivity(intent);
+    }
+
 }
