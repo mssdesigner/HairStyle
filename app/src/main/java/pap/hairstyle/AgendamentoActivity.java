@@ -4,8 +4,11 @@ import android.content.Intent;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+<<<<<<< HEAD
 import android.view.Menu;
 import android.view.MenuItem;
+=======
+>>>>>>> master
 import android.widget.CalendarView;
 import android.widget.TextView;
 import android.view.View;
@@ -30,7 +33,10 @@ public class AgendamentoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agendamento);
+<<<<<<< HEAD
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+=======
+>>>>>>> master
 
         intencao = getIntent();
         Bundle info = intencao.getExtras();
@@ -47,6 +53,7 @@ public class AgendamentoActivity extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
     //metodo para voltar para tela anterior
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -60,6 +67,8 @@ public class AgendamentoActivity extends AppCompatActivity {
         return true;
     }
 
+=======
+>>>>>>> master
 
     public void pegarDataEscolhida(View view){
         Long data = calendar.getDate();

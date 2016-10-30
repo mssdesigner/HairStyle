@@ -20,6 +20,7 @@
         android:layout_weight="2"
         android:layout_gravity="center_vertical">
 
+<<<<<<< HEAD
         <TextView
             android:id="@+id/tempoduracao"
             android:layout_width="match_parent"
@@ -31,6 +32,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp" />
+=======
+        <ImageView
+            android:layout_width="190sp"
+            android:layout_height="200sp"
+            android:src="@drawable/corte_a"
+            android:clickable="true"
+            android:onClick="escolherCorte"
+            />
+
+
+        <ImageView
+            android:layout_width="190sp"
+            android:layout_height="200sp"
+            android:src="@drawable/corte_b"
+            android:clickable="true"
+            android:onClick="escolherCorte"
+            />
+>>>>>>> master
 
     </LinearLayout>
 
@@ -56,6 +75,7 @@
             android:soundEffectsEnabled="false"
             />
 
+<<<<<<< HEAD
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -67,6 +87,23 @@
                 android:clickable="true"
                 android:onClick="escolherCorte"
                 />
+=======
+        <ImageView
+            android:layout_width="190sp"
+            android:layout_height="150sp"
+            android:src="@drawable/corte_c"
+            android:clickable="true"
+            android:onClick="escolherCorte"
+            />
+
+        <ImageView
+            android:layout_width="190sp"
+            android:layout_height="150sp"
+            android:src="@drawable/corte_d"
+            android:clickable="true"
+            android:onClick="escolherCorte"
+            />
+>>>>>>> master
 
 
             <ImageView
