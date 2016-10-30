@@ -4,7 +4,11 @@ import android.content.Intent;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.CalendarView;
 import android.widget.TextView;
+
+import java.util.Calendar;
+import java.util.Date;
 
 import pap.hairstyle.entity.Funcionario;
 
@@ -13,6 +17,8 @@ import pap.hairstyle.entity.Funcionario;
  */
 
 public class AgendamentoActivity extends AppCompatActivity {
+
+    private CalendarView calendar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +30,12 @@ public class AgendamentoActivity extends AppCompatActivity {
         System.out.println("funcionario ----" + func.getNome());
 
         ((TextView) findViewById(R.id.txtCadastro)).setText(func.getNome());
+
+
+
+        calendar = ((CalendarView) findViewById(R.id.calendarView));
+        Date today = new Date();
+        calendar.setMinDate(today.getTime());
 
     }
 }

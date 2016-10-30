@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="54fd1fbfb0e96333e707d226585db6330cae10e6">
+        sha1="fabaa80ac4a1342b1086f9f24b7b537ed2c960ed">
         <dex dex="/home/vinicius/GitHub/HairStyle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_97d82eccc77fdd15dda872e90c6de71a29acdf8f/classes.dex" />
     </item>
     <item
@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="4973c5fb03e4ad479954d4df2025ef864383f899">
+        sha1="d170e59481f876f2af956811d4851f6349a27fe7">
         <dex dex="/home/vinicius/GitHub/HairStyle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_5e94ef18089a808071eecbce9f898df1387de704/classes.dex" />
     </item>
     <item

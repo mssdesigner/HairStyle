@@ -20,14 +20,14 @@ import pap.hairstyle.entity.Funcionario;
  */
 
 public class CabelereiroService {
-
+    private String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/funcionario";
+    //private  String caminho = "http://192.168.0.18:8081/WsStyleHair/webresources/funcionario/" ;
     public List<Funcionario> getCabelereiro() {
         List<Funcionario> cabs = new ArrayList();
 
         HttpURLConnection urlConnection = null;
 
-        // String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/funcionario/" ;
-        String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/funcionario";
+
         try {
             URL url = new URL(caminho);
             urlConnection = (HttpURLConnection) url.openConnection();
