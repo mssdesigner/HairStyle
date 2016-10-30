@@ -4,6 +4,7 @@
     <item
         is-multidex="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
         jar="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -92,6 +93,8 @@
     </item>
     <item
         is-multidex="true"
+=======
+>>>>>>> 7c151e87d9f57af94e9f333570f01eec5f1c0a27
         jar="/home/vinicius/GitHub/HairStyle/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -105,7 +108,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="92a7065e36a8f3d7d3771ca9a50f0238ba27a28e">
+        sha1="245a5d72df7a5cd00edb625c7d2657b8b46e76bd">
         <dex dex="/home/vinicius/GitHub/HairStyle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_97d82eccc77fdd15dda872e90c6de71a29acdf8f/classes.dex" />
     </item>
     <item
@@ -116,15 +119,6 @@
         revision="24.0.0"
         sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
         <dex dex="/home/vinicius/GitHub/HairStyle/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.4_27f7ccd3c9e3337b3bd58c9bea93c582978b9ad6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vinicius/GitHub/HairStyle/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="ca1594fc693e819b3cc4abf95f9198ed8ceabaf6">
-        <dex dex="/home/vinicius/GitHub/HairStyle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_5e94ef18089a808071eecbce9f898df1387de704/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -152,6 +146,24 @@
         revision="24.0.0"
         sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
         <dex dex="/home/vinicius/GitHub/HairStyle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.0.0_4a913ad6c94dbe75d3cf6d34e1cbfd6e83fd4e88/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/vinicius/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/home/vinicius/GitHub/HairStyle/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.0.0_eed0c52286a296bff9330818a6e7c5a52cc9d68f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/vinicius/GitHub/HairStyle/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="cdbe07ba7fce662a46f0ff4c2519eac3ed8cd019">
+        <dex dex="/home/vinicius/GitHub/HairStyle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_5e94ef18089a808071eecbce9f898df1387de704/classes.dex" />
     </item>
     <item
         is-multidex="true"
