@@ -2,20 +2,16 @@ package pap.hairstyle;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 import android.view.Menu;
 import android.view.MenuItem;
-=======
->>>>>>> master
-=======
+
 import android.widget.CheckBox;
 import android.widget.Toast;
 import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
->>>>>>> 7c151e87d9f57af94e9f333570f01eec5f1c0a27
 
 /**
  * Created by vinicius on 30/10/16.
@@ -27,28 +23,8 @@ public class HorarioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.horario);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
+       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-    //metodo para voltar para tela anterior
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return true;
-    }
-
-=======
-    }
->>>>>>> master
-=======
         cb = new ArrayList<CheckBox>();
 
 
@@ -77,8 +53,24 @@ public class HorarioActivity extends AppCompatActivity {
         cb.add(((CheckBox)findViewById(R.id.check23)));
         cb.add(((CheckBox)findViewById(R.id.check24)));
 
-
     }
+
+    //metodo para voltar para tela anterior
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
+    }
+
+
+
+
 
     public void onCheckboxClicked(View view) {
         CheckBox aux = null;
@@ -106,5 +98,4 @@ public class HorarioActivity extends AppCompatActivity {
     }
 
 
->>>>>>> 7c151e87d9f57af94e9f333570f01eec5f1c0a27
 }
