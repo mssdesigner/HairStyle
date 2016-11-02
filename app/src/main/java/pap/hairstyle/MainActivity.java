@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private Cliente c = new Cliente();
+   // private Cliente c = new Cliente();
     private ClienteService cs = new ClienteService();
     private String email = "";
     private String senha = "";
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Executa depois da thread");
     }
 
-    private class FazerLoginTask extends AsyncTask<String, Void, Void> {
+    private class FazerLoginTask extends AsyncTask<String, Cliente , Cliente> {
         private ProgressDialog dialog;
         @Override
         protected void onPreExecute() {
@@ -68,11 +68,16 @@ public class MainActivity extends AppCompatActivity {
             dialog.show();
         }
         @Override
-        protected void onPostExecute(Void aVoid) {
+        protected void onPostExecute(Cliente c) {
             dialog.dismiss();
             try {
                 if (c != null) {
                     Intent intencao = new Intent(MainActivity.this,CabeleireiroActivity.class);
+                    Bundle info = new Bundle();
+                    info.putSerializable("Cliente",c);
+                    intencao.putExtras(info);
+
+
                     startActivity(intencao);
 
                 } else {
@@ -87,10 +92,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Void doInBackground(String... params) {
+        protected Cliente doInBackground(String... params) {
             try {
-                c = cs.getClienteEmailESenha(email, senha);
-                System.out.println("login do usuario" + c.getNome());
+               return cs.getClienteEmailESenha(email, senha);
+
             } catch(RuntimeException re) {
                 System.out.printf("Teste de erro RunTimeException");
 

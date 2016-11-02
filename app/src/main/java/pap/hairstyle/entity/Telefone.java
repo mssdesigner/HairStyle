@@ -1,10 +1,12 @@
 package pap.hairstyle.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by Renan on 18/10/2016.
  */
 
-public class Telefone {
+public class Telefone implements Serializable {
 
     private Long id;
     private String numero;

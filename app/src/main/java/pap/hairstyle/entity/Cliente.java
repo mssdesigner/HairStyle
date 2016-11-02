@@ -1,12 +1,13 @@
 package pap.hairstyle.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Renan on 18/10/2016.
  */
 
-public class Cliente {
+public class Cliente implements Serializable {
 
     private Long id;
     private String nome;
