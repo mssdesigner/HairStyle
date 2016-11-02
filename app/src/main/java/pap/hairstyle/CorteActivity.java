@@ -15,6 +15,7 @@ import android.widget.ListView;
 import java.util.List;
 
 import pap.hairstyle.entity.Servico;
+import pap.hairstyle.service.FacadeService;
 import pap.hairstyle.service.ServicoService;
 
 /**
@@ -111,12 +112,8 @@ public class CorteActivity extends AppCompatActivity {
 
         @Override
         protected List<Servico> doInBackground(String... params) {
-            ServicoService ss = new ServicoService();
-            List<Servico> asd = ss.getServicos();
-            System.out.println(asd.get(0).getDescricao() + asd.get(0).getCamFoto() + asd.get(0).getId() + asd.get(0).getTempoDuracao() +
-            asd.get(0).getValor());
-
-            return ss.getServicos();
+            FacadeService fs = new FacadeService();
+            return fs.getSs().getServicos();
         }
     }
 

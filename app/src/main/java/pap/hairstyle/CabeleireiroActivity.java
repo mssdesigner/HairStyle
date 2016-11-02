@@ -17,6 +17,7 @@ import java.util.List;
 
 import pap.hairstyle.entity.Funcionario;
 import pap.hairstyle.service.CabelereiroService;
+import pap.hairstyle.service.FacadeService;
 
 
 /**
@@ -119,8 +120,8 @@ public class CabeleireiroActivity extends AppCompatActivity {
 
         @Override
         protected List<Funcionario> doInBackground(String... params) {
-            CabelereiroService cs = new CabelereiroService();
-            return cs.getCabelereiro();
+            FacadeService fs = new FacadeService();
+            return fs.getCs().getCabelereiro();
         }
     }
 }

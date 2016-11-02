@@ -16,6 +16,7 @@ import java.net.ConnectException;
 
 import pap.hairstyle.entity.Cliente;
 import pap.hairstyle.service.ClienteService;
+import pap.hairstyle.service.FacadeService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 
    // private Cliente c = new Cliente();
-    private ClienteService cs = new ClienteService();
+    private FacadeService fs = new FacadeService();
     private String email = "";
     private String senha = "";
 
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Cliente doInBackground(String... params) {
             try {
-               return cs.getClienteEmailESenha(email, senha);
+               return fs.getClienteS().getClienteEmailESenha(email, senha);
 
             } catch(RuntimeException re) {
                 System.out.printf("Teste de erro RunTimeException");

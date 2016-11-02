@@ -12,6 +12,7 @@ import android.widget.EditText;
 import pap.hairstyle.entity.Cliente;
 import pap.hairstyle.entity.Telefone;
 import pap.hairstyle.service.ClienteService;
+import pap.hairstyle.service.FacadeService;
 import pap.hairstyle.service.TelefoneService;
 
 /**
@@ -20,9 +21,9 @@ import pap.hairstyle.service.TelefoneService;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    private ClienteService cs = new ClienteService();
+    private FacadeService fs = new FacadeService();
     private Cliente c;
-    private TelefoneService ts = new TelefoneService();
+
     private Telefone t;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,9 +84,9 @@ public class CadastroActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(String... params) {
 
-            c = cs.post(c);
+            c = fs.getClienteS().post(c);
             t.setCliente(c);
-            t = ts.post(t);
+            t = fs.getTs().post(t);
             return null;
         }
     }
