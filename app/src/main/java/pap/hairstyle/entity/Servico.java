@@ -1,22 +1,20 @@
 package pap.hairstyle.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by vinicius on 30/10/16.
  */
 
-public class Servico {
+public class Servico implements Serializable {
 
     private Long id;
     private String descricao;
     private double valor;
-
-
-
     private int tempoDuracao;
-
     private String camFoto;
+
 
     public Long getId() {
         return id;

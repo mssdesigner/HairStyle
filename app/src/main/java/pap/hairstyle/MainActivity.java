@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 if (c != null) {
                     Intent intencao = new Intent(MainActivity.this,CabeleireiroActivity.class);
                     startActivity(intencao);
+
                 } else {
                     Toast toast = Toast.makeText(MainActivity.this, "Falha ao efetuar Login", Toast.LENGTH_SHORT);
                     toast.show();
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(String... params) {
             try {
                 c = cs.getClienteEmailESenha(email, senha);
-                System.out.println("" + c.getNome());
+                System.out.println("login do usuario" + c.getNome());
             } catch(RuntimeException re) {
                 System.out.printf("Teste de erro RunTimeException");
 

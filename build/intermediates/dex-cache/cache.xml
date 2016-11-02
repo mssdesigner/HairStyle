@@ -21,6 +21,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="fd55e1105f8509d6c92065443b758de42aa4bcc8">
+        <dex dex="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b909d5d46b2a28301c5b251cb3e601defcc958fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_95e8530222c122ec375edc42031165c7f22160cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Renan\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
         jumboMode="true"
         optimize="true"
@@ -30,20 +48,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="0a795098458cee68ee5a2319e008b7aae2797e1c">
-        <dex dex="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b909d5d46b2a28301c5b251cb3e601defcc958fe\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="3770e29f1063b788641183bd67acb2a64cb196ed">
+        sha1="ec76c67e6f59eef010858004cc87159ad2ae4c2c">
         <dex dex="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2e583ee69534a0f0d6f7d01341d44a4e9c0ba682\classes.dex" />
     </item>
     <item
@@ -54,15 +63,6 @@
         revision="24.0.0"
         sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
         <dex dex="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0_8fedda58e31c47072be28b206e06a0bd6f156750\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
-        <dex dex="C:\Users\Renan\Documents\PAP\HairStyle\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_95e8530222c122ec375edc42031165c7f22160cb\classes.dex" />
     </item>
     <item
         is-multidex="true"
