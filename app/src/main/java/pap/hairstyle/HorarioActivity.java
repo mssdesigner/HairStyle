@@ -1,5 +1,8 @@
 package pap.hairstyle;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -10,8 +13,12 @@ import android.widget.CheckBox;
 import android.widget.Toast;
 import android.view.View;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import pap.hairstyle.entity.Agendamento;
+import pap.hairstyle.service.FacadeService;
 
 /**
  * Created by vinicius on 30/10/16.
@@ -19,12 +26,14 @@ import java.util.List;
 
 public class HorarioActivity extends AppCompatActivity {
     List<CheckBox> cb;
+
+    Bundle info;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.horario);
        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         cb = new ArrayList<CheckBox>();
 
 
@@ -53,6 +62,16 @@ public class HorarioActivity extends AppCompatActivity {
         cb.add(((CheckBox)findViewById(R.id.check23)));
         cb.add(((CheckBox)findViewById(R.id.check24)));
 
+        Intent inten = getIntent();
+        info = inten.getExtras();
+
+        carregarDados();
+
+
+
+
+
+
     }
 
     //metodo para voltar para tela anterior
@@ -69,7 +88,9 @@ public class HorarioActivity extends AppCompatActivity {
     }
 
 
-
+    public void carregarDados(){
+        new CarregarHorarioTask().execute();
+    }
 
 
     public void onCheckboxClicked(View view) {
@@ -95,6 +116,46 @@ public class HorarioActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+
+    private class CarregarHorarioTask extends AsyncTask<String, Void, List<Agendamento>> {
+        private ProgressDialog dialog;
+        @Override
+        protected void onPreExecute() {
+            dialog = new ProgressDialog(HorarioActivity.this);
+            dialog.show();
+        }
+
+
+        @Override
+        protected void onPostExecute(List<Agendamento> agendamentos) {
+            try {
+                if (agendamentos != null) {
+                    for(int i =0; i<agendamentos.size(); i++){
+                        SimpleDateFormat df = new SimpleDateFormat("HH:mm");
+                        cb.get(i).setText(df.format(agendamentos.get(i).getDataHoraIni()));
+                        cb.get(i).setVisibility(View.VISIBLE);
+
+                    }
+                }
+
+
+
+                dialog.dismiss();
+
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+
+        }
+
+        @Override
+        protected List<Agendamento> doInBackground(String... params) {
+            FacadeService fs = new FacadeService();
+            return fs.getAs().getAgendamentosPorData(info.getString("dataEsc"));
+        }
     }
 
 

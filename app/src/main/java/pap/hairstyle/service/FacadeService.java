@@ -10,12 +10,14 @@ public class FacadeService {
     private ClienteService clienteS;
     private ServicoService ss;
     private TelefoneService ts;
+    private AgendamentoService as;
 
     public FacadeService(){
         cs = new CabelereiroService();
         clienteS = new ClienteService();
         ss = new ServicoService();
         ts = new TelefoneService();
+        as = new AgendamentoService();
     }
 
     public CabelereiroService getCs() {
@@ -48,5 +50,13 @@ public class FacadeService {
 
     public void setTs(TelefoneService ts) {
         this.ts = ts;
+    }
+
+    public AgendamentoService getAs() {
+        return as;
+    }
+
+    public void setAs(AgendamentoService as) {
+        this.as = as;
     }
 }

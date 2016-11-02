@@ -67,14 +67,14 @@ public class AgendamentoActivity extends AppCompatActivity {
 
     public void pegarDataEscolhida(View view){
         Long data = calendar.getDate();
-       // System.out.println("passou aqui");
-      //  DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-      //  Date date = new Date(data);
-      //  System.out.println("essa data escolhida : " + df.format(date));
+        System.out.println("passou aqui");
+      DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+      Date date = new Date(data);
+      System.out.println("essa data escolhida : " + df.format(date));
 
 
         Bundle info = intencao.getExtras();
-        info.putLong("dataEsc",data);
+        info.putString("dataEsc",df.format(date));
 
         Intent intent = new Intent(this,HorarioActivity.class);
         intent.putExtras(info);
