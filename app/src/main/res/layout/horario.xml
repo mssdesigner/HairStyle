@@ -26,13 +26,15 @@
 
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="08:00"
             android:id="@+id/check1"
-            android:checked="false" />
+            android:checked="true" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="08:30"
@@ -40,6 +42,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="09:00"
@@ -47,6 +50,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="09:30"
@@ -61,6 +65,7 @@
 
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="10:00"
@@ -68,6 +73,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="10:30"
@@ -75,6 +81,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="11:00"
@@ -82,6 +89,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="11:30"
@@ -96,6 +104,7 @@
 
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="12:00"
@@ -103,6 +112,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="12:30"
@@ -110,6 +120,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="13:00"
@@ -117,6 +128,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="13:30"
@@ -131,6 +143,7 @@
 
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="14:00"
@@ -138,6 +151,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="14:30"
@@ -145,6 +159,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="15:00"
@@ -152,6 +167,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="15:30"
@@ -166,6 +182,7 @@
 
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="16:00"
@@ -173,6 +190,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="16:30"
@@ -180,6 +198,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="17:00"
@@ -187,6 +206,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="17:30"
@@ -201,6 +221,7 @@
 
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="18:00"
@@ -208,6 +229,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="18:30"
@@ -215,6 +237,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="19:00"
@@ -222,6 +245,7 @@
             android:checked="false" />
 
         <CheckBox
+            android:onClick="onCheckboxClicked"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:text="19:30"
@@ -237,7 +261,9 @@
         android:text="Próximo"
         android:textColor="#faf6f6"
         android:textSize="10pt"
-        android:background="#413e22" />
+        android:background="#413e22"
+        android:onClick="pegarHorarioEscolhido"
+        />
 
 
 </LinearLayout>

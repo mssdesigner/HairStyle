@@ -21,9 +21,13 @@ import pap.hairstyle.entity.Telefone;
 
 public class TelefoneService {
 
+    //private String caminho = "http://192.168.0.18:8081/WsStyleHair/webresources/telefone";
+    private String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/telefone";
+
+
+
     public Telefone post(Telefone telefone){
-        //String caminho = "http://192.168.0.14:8081/WsStyleHair/webresources/telefone";
-        String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/telefone";
+
 
         HttpURLConnection urlConnection = null;
         try {

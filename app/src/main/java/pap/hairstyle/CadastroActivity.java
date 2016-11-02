@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
@@ -26,6 +28,20 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastro);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    //metodo para voltar para tela anterior
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
     }
 
     public void fazerCadastro(View view){
@@ -60,6 +76,7 @@ public class CadastroActivity extends AppCompatActivity {
             ((EditText) findViewById(R.id.editTextTelefone)).setText("");
             ((EditText) findViewById(R.id.editTextSenha)).setText("");
             ((EditText) findViewById(R.id.editTextEmail)).setText("");
+            ((EditText) findViewById(R.id.editTextConfSenha)).setText("");
 
             dialog.dismiss();
         }
