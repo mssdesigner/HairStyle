@@ -16,6 +16,7 @@ public class Cliente implements Serializable {
     private String cpf;
 
     private List<Telefone> telefones;
+    private List<Agendamento> agendamentos;
 
 
 
@@ -68,4 +69,11 @@ public class Cliente implements Serializable {
         this.telefones = telefones;
     }
 
+    public List<Agendamento> getAgendamentos() {
+        return agendamentos;
+    }
+
+    public void setAgendamentos(List<Agendamento> agendamentos) {
+        this.agendamentos = agendamentos;
+    }
 }

@@ -28,6 +28,7 @@ public class CabeleireiroActivity extends AppCompatActivity {
 
     private ArrayAdapter<Funcionario> adapter;
     ListView lista;
+    Bundle info;
 
     List<Funcionario> funcs;
 
@@ -37,6 +38,8 @@ public class CabeleireiroActivity extends AppCompatActivity {
         setContentView(R.layout.listview_cabeleireiro);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        final Intent inten = getIntent();
+
         lista = (ListView) findViewById(R.id.listviewcabeleireiros);
         carregarDados();
 
@@ -44,11 +47,11 @@ public class CabeleireiroActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?>parent, View view, int position,long id){
 
-               Bundle bundle = new Bundle();
+               Bundle info = inten.getExtras();
                // bundle.putString("funcionario",nomeFunc);
-                bundle.putSerializable("funcionario", funcs.get(position));
+                info.putSerializable("funcionario", funcs.get(position));
                 Intent intencao = new Intent(CabeleireiroActivity.this,CorteActivity.class);
-                intencao.putExtras(bundle);
+                intencao.putExtras(info);
                 startActivity(intencao);
 
             }

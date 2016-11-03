@@ -1,12 +1,13 @@
 package pap.hairstyle.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by vinicius on 30/10/16.
  */
 
-public class Agendamento {
+public class Agendamento implements Serializable {
     private Long id;
 
 

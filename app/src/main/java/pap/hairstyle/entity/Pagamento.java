@@ -1,10 +1,12 @@
 package pap.hairstyle.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by vinicius on 30/10/16.
  */
 
-public class Pagamento {
+public class Pagamento  implements Serializable{
 
     private Long id;
     private String status;

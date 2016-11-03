@@ -25,6 +25,12 @@
         android:layout_height="100px"
         android:layout_marginBottom="100sp">
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
 
         <RadioButton
             android:layout_width="170sp"
@@ -41,6 +47,8 @@
             android:id="@+id/dinheiro"
             android:checked="false"
             android:textSize="10pt" />
+
+        </RadioGroup>
     </LinearLayout>
 
 
@@ -51,6 +59,8 @@
             android:textColor="#faf6f6"
             android:textSize="10pt"
             android:layout_marginTop="120sp"
-            android:background="#413e22" />
+            android:background="#413e22"
+            android:onClick="escolherPagamento"
+            />
 
 </LinearLayout>

@@ -23,6 +23,9 @@
         <activity android:name=".CabeleireiroActivity"/>
         <activity android:name=".AgendamentoActivity"/>
         <activity android:name=".HorarioActivity"/>
+        <activity android:name=".PagamentoActivity"/>
+        <activity android:name=".ReservaActivity"/>
+        <activity android:name=".PagamentoCartaoActivity"/>
     </application>
 
 </manifest>

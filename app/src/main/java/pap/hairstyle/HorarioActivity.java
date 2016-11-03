@@ -29,6 +29,8 @@ public class HorarioActivity extends AppCompatActivity {
 
     Bundle info;
 
+    private List<Agendamento> agnds ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,7 +114,10 @@ public class HorarioActivity extends AppCompatActivity {
     public void pegarHorarioEscolhido(View view){
         for(int i =0; i< cb.size(); i++){
             if(cb.get(i).isChecked()){
-                System.out.println(cb.get(i).getText().toString());
+                info.putSerializable("agendamento",agnds.get(i));
+                Intent in = new Intent(this,ReservaActivity.class);
+                in.putExtras(info);
+                startActivity(in);
             }
         }
 
@@ -136,7 +141,8 @@ public class HorarioActivity extends AppCompatActivity {
                         SimpleDateFormat df = new SimpleDateFormat("HH:mm");
                         cb.get(i).setText(df.format(agendamentos.get(i).getDataHoraIni()));
                         cb.get(i).setVisibility(View.VISIBLE);
-
+                        agnds = new ArrayList<>();
+                        agnds = agendamentos;
                     }
                 }
 
