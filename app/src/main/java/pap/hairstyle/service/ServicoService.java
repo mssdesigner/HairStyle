@@ -21,7 +21,7 @@ import pap.hairstyle.entity.Servico;
 public class ServicoService {
 
     private String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/servico";
-
+    //private String caminho = "http://192.168.0.17:8081/WsStyleHair/webresources/servico";
 
     public List<Servico> getServicos() {
         List<Servico> serv = new ArrayList();

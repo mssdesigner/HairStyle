@@ -27,7 +27,7 @@ import pap.hairstyle.entity.Agendamento;
 public class AgendamentoService {
     //private String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/agendamento/buscardata/";
     private String caminho = "http://mssdesigner.ddns.net:8022/WsStyleHair-1.0-SNAPSHOT/webresources/agendamento";
-    //private  String caminho = "http://192.168.0.19:8081/WsStyleHair/webresources/agendamento/buscardata/" ;
+    //private  String caminho = "http://192.168.0.17:8081/WsStyleHair/webresources/agendamento" ;
     public List<Agendamento> getAgendamentosPorData(String data) {
         List<Agendamento> agend = new ArrayList();
 

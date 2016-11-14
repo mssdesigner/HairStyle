@@ -79,13 +79,13 @@ public class PagamentoActivity extends AppCompatActivity {
 
 
             a = (Agendamento) info.getSerializable("agendamento");
-           // a.setCliente((Cliente) info.getSerializable("Cliente"));
+            a.setCliente((Cliente) info.getSerializable("Cliente"));
             a.setHoraMarcada('y');
-           // a.setFunc((Funcionario) info.getSerializable("funcionario"));
+            a.setFunc((Funcionario) info.getSerializable("funcionario"));
 
-           // a.setValorTotal(((Servico) info.getSerializable("Servico")).getValor());
+            a.setValorTotal(((Servico) info.getSerializable("Servico")).getValor());
             System.out.println("" + a.getId());
-            fs.getAs().post(a);
+            a = fs.getAs().post(a);
 
 
 
